@@ -1,2 +1,1 @@
-# minimal-profile
-Minimal profile build with social links and tech stack
+Minimal profile showcases tech stack 🛠️ and links to social media 📱
