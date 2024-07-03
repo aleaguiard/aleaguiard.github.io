@@ -127,6 +127,7 @@ nav a {
 	color: white;
 	align-self: flex-start;
 	margin-left: 1rem;
+	font-weight: bold;
 }
 
 .contact-info p {
@@ -194,9 +195,28 @@ nav a {
 .tech-item {
 	display: flex;
 	align-items: center;
-	margin: 5px;
+	margin: 10px;
 }
 
 .tech-item i {
 	margin-right: 5px;
+}
+
+nav a:hover,
+.tech-item:hover,
+.contact-info a:hover {
+	font-weight: bold;
+}
+
+nav a,
+.contact-info a,
+.tech-item {
+	transition: text-shadow 0.3s ease;
+}
+
+nav a:hover,
+.contact-info a:hover,
+.tech-item:hover {
+	font-weight: bold;
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
