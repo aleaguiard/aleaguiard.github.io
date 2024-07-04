@@ -4,41 +4,6 @@
 	padding: 0;
 }
 
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(180deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes move {
-	0% {
-		top: 10%;
-		left: 10%;
-	}
-	25% {
-		top: 10%;
-		left: calc(100% - var(--size));
-	}
-	50% {
-		top: calc(100% - var(--size));
-		left: calc(100% - var(--size));
-	}
-	75% {
-		top: calc(100% - var(--size));
-		left: 10%;
-	}
-	100% {
-		top: 10%;
-		left: 10%;
-	}
-}
-
 .gradient-container {
 	position: fixed;
 	top: 0;
@@ -47,6 +12,7 @@
 	height: 100%;
 	overflow: hidden;
 	z-index: -1;
+	pointer-events: none;
 }
 
 .gradient {
@@ -57,16 +23,17 @@
 	height: var(--size);
 	filter: blur(calc(var(--size) / 5));
 	background-image: linear-gradient(hsl(222, 84%, 30%), hsl(164, 79%, 40%));
-	animation: rotate var(--speed) var(--easing) infinite alternate,
-		move 10s infinite alternate ease-in-out;
+	animation: rotate var(--speed) var(--easing) infinite alternate;
 	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 	position: absolute;
 	pointer-events: none;
+	transform: translate(-50%, -50%);
+	transition: top 0.1s ease, left 0.1s ease;
 }
 
 @media (min-width: 720px) {
 	.gradient {
-		--size: 500px;
+		--size: 300px;
 	}
 }
 

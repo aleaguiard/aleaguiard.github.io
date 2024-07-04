@@ -1,19 +1,20 @@
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
+const gradient = document.querySelector(".gradient");
 
 window.addEventListener("mousemove", moveCursor);
 
 function moveCursor(e) {
-	const postX = e.clientX;
-	const postY = e.clientY;
+	const posX = e.clientX;
+	const posY = e.clientY;
 
-	cursorDot.style.left = `${postX}px`;
-	cursorDot.style.top = `${postY}px`;
+	cursorDot.style.left = `${posX}px`;
+	cursorDot.style.top = `${posY}px`;
 
 	cursorOutline.animate(
 		{
-			left: `${postX}px`,
-			top: `${postY}px`,
+			left: `${posX}px`,
+			top: `${posY}px`,
 		},
 		{
 			duration: 500,
@@ -21,4 +22,7 @@ function moveCursor(e) {
 			fill: "forwards",
 		}
 	);
+
+	gradient.style.left = `${posX}px`;
+	gradient.style.top = `${posY}px`;
 }
