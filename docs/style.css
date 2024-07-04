@@ -4,6 +4,18 @@
 	padding: 0;
 }
 
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .gradient-container {
 	position: fixed;
 	top: 0;
@@ -18,7 +30,7 @@
 .gradient {
 	--size: 300px;
 	--speed: 2s;
-	--easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+	--easing: ease;
 	width: var(--size);
 	height: var(--size);
 	filter: blur(calc(var(--size) / 5));
@@ -27,8 +39,9 @@
 	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 	position: absolute;
 	pointer-events: none;
-	transform: translate(-50%, -50%);
-	transition: top 0.1s ease, left 0.1s ease;
+	transform: translateZ(0);
+	transition: opacity 0.3s ease;
+	opacity: 0;
 }
 
 body {
