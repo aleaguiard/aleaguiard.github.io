@@ -112,6 +112,12 @@ nav a {
 	color: white;
 }
 
+.cursor-dot,
+.cursor-outline,
+.gradient {
+	opacity: 0;
+}
+
 @media (max-width: 630px) {
 	.contact-info {
 		position: fixed;
