@@ -31,12 +31,6 @@
 	transition: top 0.1s ease, left 0.1s ease;
 }
 
-@media (min-width: 720px) {
-	.gradient {
-		--size: 300px;
-	}
-}
-
 body {
 	background-color: #071c39;
 	margin: 0;
@@ -63,14 +57,17 @@ header {
 
 nav {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	gap: 1rem;
-	transition: none;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 nav a {
 	color: white;
 	text-decoration: none;
+	min-width: 100px;
+	flex: 1 0 auto;
 }
 
 .contact-info {
@@ -113,7 +110,7 @@ nav a {
 	color: white;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 630px) {
 	.contact-info {
 		position: fixed;
 		text-align: right;
@@ -124,11 +121,6 @@ nav a {
 	}
 	.contact-info .name {
 		align-self: flex-end;
-	}
-	nav {
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
 	}
 }
 
