@@ -150,6 +150,9 @@ nav a {
 		width: 90%;
 		padding: 0 1rem;
 	}
+	nav {
+		gap: 0.75rem;
+	}
 }
 
 .cursor-dot {
